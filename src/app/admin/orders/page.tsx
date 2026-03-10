@@ -76,25 +76,19 @@ export default function AdminOrdersPage() {
                 className="pl-9"
               />
             </div>
-            <Select value={filterStatus ?? ""} onValueChange={(v: string) => setFilterStatus(v)}>
-              <SelectTrigger className="w-full sm:w-[180px]">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="pending">Pending</SelectItem>
-                <SelectItem value="processing">Processing</SelectItem>
-                <SelectItem value="shipped">Shipped</SelectItem>
-                <SelectItem value="delivered">Delivered</SelectItem>
-                <SelectItem value="cancelled">Cancelled</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Orders Table */}
-      <Card className="border-border/50 shadow-sm">
+          <Select onValueChange={(value) => setSelectedValue(value ?? '')}>
+  <SelectTrigger className="w-full sm:w-[180px]">
+    <SelectValue placeholder="All Status" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="all">All Status</SelectItem>
+    <SelectItem value="pending">Pending</SelectItem>
+    <SelectItem value="processing">Processing</SelectItem>
+    <SelectItem value="shipped">Shipped</SelectItem>
+    <SelectItem value="delivered">Delivered</SelectItem>
+    <SelectItem value="cancelled">Cancelled</SelectItem>
+  </SelectContent>
+</Select>  
         <CardHeader className="pb-0">
           <CardTitle className="text-base font-semibold">{filteredOrders.length} Orders</CardTitle>
         </CardHeader>
