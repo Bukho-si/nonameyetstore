@@ -35,9 +35,12 @@ export default function AdminOrdersPage() {
     return matchesSearch && matchesStatus;
   });
 
-  return (
-    <></>
-  });
+   return (
+   <>
+   </>
+ );
+
+
 
   return (
     <div className="space-y-6">
