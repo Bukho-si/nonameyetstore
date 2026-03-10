@@ -76,7 +76,7 @@ export default function AdminOrdersPage() {
                 className="pl-9"
               />
             </div>
-            <Select value={filterStatus ?? ""} onValueChange={(v) => setFilterStatus(v)}>
+            <Select value={filterStatus ?? ""} onValueChange={(v: string) => setFilterStatus(v)}>
               <SelectTrigger className="w-full sm:w-[180px]">
                 <SelectValue />
               </SelectTrigger>
