@@ -29,8 +29,14 @@ export default function AdminOrdersPage() {
     const matchesSearch =
       o.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
       o.customer.toLowerCase().includes(searchQuery.toLowerCase());
+
     const matchesStatus = filterStatus === "all" || o.status === filterStatus;
+
     return matchesSearch && matchesStatus;
+  });
+
+  return (
+    <></>
   });
 
   return (
